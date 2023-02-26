@@ -1,11 +1,20 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import { ColorType } from '../types';
 
-function IncrementButton() {
+interface Props {
+  color?: ColorType;
+  text: string;
+  incrementValue: number;
+}
+
+function IncrementButton(props: Props) {
+  const color = props.color || 'primary';
+
   return (
     <Button
       variant="contained"
-      color="success"
+      color={color}
       sx={{
         borderRadius: '100%',
         height: '35px',
@@ -13,7 +22,7 @@ function IncrementButton() {
         padding: '0px',
         minWidth: '35px',
       }}>
-      +1
+      {props.text}
     </Button>
   );
 }
