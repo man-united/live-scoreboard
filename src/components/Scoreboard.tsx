@@ -5,7 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 function Scoreboard() {
   return (
-    <div>
+    <div data-testid="scoreboard">
       <Typography variant="h1" color="primary" align="center">
         Scoreboard
       </Typography>
