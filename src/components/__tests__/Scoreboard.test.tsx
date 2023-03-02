@@ -8,13 +8,18 @@ describe('Renders Scoreboard component correctly', () => {
   });
 
   test('Renders the Scoreboard component', () => {
-    const ScoreboardElement = screen.getByTestId('scoreboard');
-    expect(ScoreboardElement).toBeInTheDocument();
+    const scoreboardElement = screen.getByTestId('scoreboard');
+    expect(scoreboardElement).toBeInTheDocument();
   });
 
   test('Renders the Scoreboard component title', () => {
-    const ScoreboardElement = screen.getByTestId('scoreboard');
-    expect(ScoreboardElement).toHaveTextContent('Scoreboard');
+    const scoreboardElement = screen.getByTestId('scoreboard');
+    expect(scoreboardElement).toHaveTextContent('Scoreboard');
+  });
+
+  test('Renders 4 TeamScoreCards', () => {
+    const teamScoreCards = screen.getAllByTestId('team-scorecard');
+    expect(teamScoreCards).toHaveLength(4);
   });
 });
 

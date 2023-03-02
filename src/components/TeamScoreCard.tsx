@@ -7,7 +7,8 @@ function TeamScoreCard() {
   return (
     <Card
       sx={{ margin: 1, maxWidth: '50vw', height: '40vh' }}
-      variant="outlined">
+      variant="outlined"
+      data-testid="team-scorecard">
       <CardContent>Team name</CardContent>
       <IncrementButton text="+1" incrementValue={1} color="success" />
       <IncrementButton text="-1" incrementValue={-1} color="error" />
