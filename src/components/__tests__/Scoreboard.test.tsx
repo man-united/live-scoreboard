@@ -2,22 +2,22 @@ import { render, screen, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Scoreboard from '../Scoreboard';
 
-describe('Scoreboard component tests', () => {
+describe('Scoreboard component', () => {
   beforeEach(() => {
     render(<Scoreboard />);
   });
 
-  test('Scoreboard component renders', () => {
+  it('should render', () => {
     const scoreboardElement = screen.getByTestId('scoreboard');
     expect(scoreboardElement).toBeInTheDocument();
   });
 
-  test('Scoreboard component renders default title', () => {
+  it('should renderr default title', () => {
     const scoreboardElement = screen.getByTestId('scoreboard');
     expect(scoreboardElement).toHaveTextContent('Scoreboard');
   });
 
-  test('Scoreboard component renders 4 TeamScoreCards components', () => {
+  it('should render 4 TeamScoreCard components', () => {
     const teamScoreCards = screen.getAllByTestId('team-scorecard');
     expect(teamScoreCards).toHaveLength(4);
   });
