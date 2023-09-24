@@ -1,4 +1,3 @@
-import React from 'react';
 import Typography from '@mui/material/Typography';
 import TeamScoreCard from './TeamScoreCard';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -12,16 +11,16 @@ function Scoreboard() {
 
       <Grid container spacing={0} marginTop={1} marginX={1}>
         <Grid xs={6}>
-          <TeamScoreCard />
+          <TeamScoreCard teamId={1} />
         </Grid>
         <Grid xs={6}>
-          <TeamScoreCard />
+          <TeamScoreCard teamId={2} />
         </Grid>
         <Grid xs={6}>
-          <TeamScoreCard />
+          <TeamScoreCard teamId={3} />
         </Grid>
         <Grid xs={6}>
-          <TeamScoreCard />
+          <TeamScoreCard teamId={4} />
         </Grid>
       </Grid>
     </div>

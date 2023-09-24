@@ -12,7 +12,7 @@ describe('Scoreboard component', () => {
     expect(scoreboardElement).toBeInTheDocument();
   });
 
-  it('should renderr default title', () => {
+  it('should render default title', () => {
     const scoreboardElement = screen.getByTestId('scoreboard');
     expect(scoreboardElement).toHaveTextContent('Scoreboard');
   });
