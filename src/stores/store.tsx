@@ -4,8 +4,8 @@ class Store {
   teamScores: Record<number, number> = {
     1: 0,
     2: 0,
-    3: 3,
-    4: 5,
+    3: 0,
+    4: 0,
   };
 
   constructor() {

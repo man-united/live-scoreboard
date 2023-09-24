@@ -1,5 +1,3 @@
-import Box from '@mui/material/Box';
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -22,8 +20,18 @@ function TeamScoreCard({ teamId }: TeamScoreCardProps) {
       <CardContent>Team name</CardContent>
       <Grid container spacing={0} marginTop={1} marginX={1}>
         <Grid xs={2} border={1}>
-          <IncrementButton text="+1" incrementValue={1} color="success" teamId={teamId} />
-          <IncrementButton text="-1" incrementValue={-1} color="error" teamId={teamId} />
+          <IncrementButton
+            text="+1"
+            incrementValue={1}
+            color="success"
+            teamId={teamId}
+          />
+          <IncrementButton
+            text="-1"
+            incrementValue={-1}
+            color="error"
+            teamId={teamId}
+          />
         </Grid>
         <Grid xs={10} border={1}>
           Points: {points}
