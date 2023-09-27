@@ -1,5 +1,4 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import { Card, CardContent, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import IncrementButton from './IncrementButton';
 
@@ -8,33 +7,26 @@ import store from '../stores/store';
 
 interface TeamScoreCardProps {
   teamId: number;
+  color: string;
 }
 
-function TeamScoreCard({ teamId }: TeamScoreCardProps) {
+function TeamScoreCard({ teamId, color }: TeamScoreCardProps) {
   const points = store.teamScores[teamId];
   return (
     <Card
-      sx={{ margin: 1, maxWidth: '50vw', height: '40vh' }}
+      sx={{ margin: 1, maxWidth: '50vw', height: '40vh', border: `2px solid black` }}
       variant="outlined"
       data-testid="team-scorecard">
       <CardContent>Team name</CardContent>
       <Grid container spacing={0} marginTop={1} marginX={1}>
-        <Grid xs={2} border={1}>
-          <IncrementButton
-            text="+1"
-            incrementValue={1}
-            color="success"
-            teamId={teamId}
-          />
-          <IncrementButton
-            text="-1"
-            incrementValue={-1}
-            color="error"
-            teamId={teamId}
-          />
+        <Grid xs={2}>
+          <IncrementButton text="+1" incrementValue={1} color="success" teamId={teamId} />
+          <IncrementButton text="-1" incrementValue={-1} color="error" teamId={teamId} />
         </Grid>
-        <Grid xs={10} border={1}>
-          Points: {points}
+        <Grid xs={10} container alignItems="center" justifyContent="center">
+          <Typography variant="h1" sx={{ fontSize: '150px', color: `${color}` }}>
+            {points}
+          </Typography>
         </Grid>
       </Grid>
     </Card>

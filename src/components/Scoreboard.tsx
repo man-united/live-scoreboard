@@ -11,16 +11,16 @@ function Scoreboard() {
 
       <Grid container spacing={0} marginTop={1} marginX={1}>
         <Grid xs={6}>
-          <TeamScoreCard teamId={1} />
+          <TeamScoreCard teamId={1} color="red" />
         </Grid>
         <Grid xs={6}>
-          <TeamScoreCard teamId={2} />
+          <TeamScoreCard teamId={2} color="blue" />
         </Grid>
         <Grid xs={6}>
-          <TeamScoreCard teamId={3} />
+          <TeamScoreCard teamId={3} color="green" />
         </Grid>
         <Grid xs={6}>
-          <TeamScoreCard teamId={4} />
+          <TeamScoreCard teamId={4} color="#fdd835" />
         </Grid>
       </Grid>
     </div>
